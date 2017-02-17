@@ -51,7 +51,7 @@ namespace WordCounterTest
             RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
             //act
-            string result = newCounter.ContainsWord();
+            bool result = newCounter.ContainsWord();
             Console.WriteLine(expectedResult);
             Console.WriteLine(result);
             //assert
