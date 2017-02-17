@@ -7,7 +7,7 @@ namespace WordCounterTest
 {
     public class RepeatCounterTest
     {
-// this will return the inputted sentence exacty
+        // this will return the inputted sentence exacty
         [Fact]
         public void GetSentence_returnUserSentence_sameSentence()
         {
@@ -23,7 +23,7 @@ namespace WordCounterTest
             //assert
             Assert.Equal(returnSentence, result);
         }
-// this will return the inputted sentence exacty
+        // this will return the inputted sentence exacty
         [Fact]
         public void GetWord_returnUserWord_sameWord()
         {
@@ -40,7 +40,7 @@ namespace WordCounterTest
             Assert.Equal(returnWord, result);
         }
 
-// this will return true or false if the sentence contains the word
+        // this will return true or false if the sentence contains the word
         [Fact]
         public void containsWord_doesSentenceHaveWord_true()
         {
@@ -57,7 +57,7 @@ namespace WordCounterTest
             Assert.Equal(expectedResult, result);
         }
 
-// this will return how many instances of the word are in the sentence
+        // this will return how many instances of the word are in the sentence
         [Fact]
         public void CountRepeats_howManyTimesdoesSentenceHaveWord_one()
         {
@@ -74,7 +74,7 @@ namespace WordCounterTest
             Assert.Equal(expectedResult, result);
         }
 
- // this will return how many instances of the word are in the sentence with multiple words
+        // this will return how many instances of the word are in the sentence with multiple words
         [Fact]
         public void CountRepeats_howManyTimesdoesSentenceHaveWord_three()
         {
@@ -91,22 +91,22 @@ namespace WordCounterTest
             Assert.Equal(expectedResult, result);
         }
 
-// this will run method regardless of capitalization
-       [Fact]
-       public void CountRepeats_countsRegardlessofCap_three()
-       {
-           //arrange
-           string sentence = "this is a Sentence sentEnce is it a sentence";
-           string word = "senteNce";
-           int expectedResult = 3;
-           RepeatCounter newCounter = new RepeatCounter(sentence, word);
+        // this will run method regardless of capitalization
+        [Fact]
+        public void CountRepeats_countsRegardlessofCap_three()
+        {
+            //arrange
+            string sentence = "this is a Sentence sentEnce is it a sentence";
+            string word = "senteNce";
+            int expectedResult = 3;
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
-           //act
-           int result = newCounter.CountRepeats();
+            //act
+            int result = newCounter.CountRepeats();
 
-           //assert
-           Assert.Equal(expectedResult, result);
-       }
+            //assert
+            Assert.Equal(expectedResult, result);
+        }
 
     }
 }
