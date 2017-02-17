@@ -15,8 +15,8 @@ namespace WordCounter.Objects
         {
             _sentence = userSentence;
             _word = userWord;
-            _sentenceSplitArray = userSentence.Split(' ');
-            _wordArray = _word.Split(' ');
+            _sentenceSplitArray = userSentence.ToLower().Split(' ');
+            _wordArray = _word.ToLower().Split(' ');
             _count = 0;
         }
 

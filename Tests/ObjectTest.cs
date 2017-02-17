@@ -89,9 +89,24 @@ namespace WordCounterTest
 
             //assert
             Assert.Equal(expectedResult, result);
-                }
+        }
 
+// this will run method regardless of capitalization
+       [Fact]
+       public void CountRepeats_countsRegardlessofCap_three()
+       {
+           //arrange
+           string sentence = "this is a Sentence sentEnce is it a sentence";
+           string word = "senteNce";
+           int expectedResult = 3;
+           RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
+           //act
+           int result = newCounter.CountRepeats();
+
+           //assert
+           Assert.Equal(expectedResult, result);
+       }
 
     }
 }
