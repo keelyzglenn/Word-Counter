@@ -52,11 +52,12 @@ namespace WordCounterTest
 
             //act
             bool result = newCounter.ContainsWord();
+
             //assert
             Assert.Equal(expectedResult, result);
         }
 
-// this will return true or false if the sentence contains the word
+// this will return how many instances of the word are in the sentence
         [Fact]
         public void CountRepeats_howManyTimesdoesSentenceHaveWord_one()
         {
@@ -68,11 +69,27 @@ namespace WordCounterTest
 
             //act
             int result = newCounter.CountRepeats();
-            Console.WriteLine(expectedResult);
-            Console.WriteLine(result);
+
             //assert
             Assert.Equal(expectedResult, result);
         }
+
+ // this will return how many instances of the word are in the sentence with multiple words
+        [Fact]
+        public void CountRepeats_howManyTimesdoesSentenceHaveWord_three()
+        {
+            //arrange
+            string sentence = "this is a sentence sentence is it a sentence";
+            string word = "sentence";
+            int expectedResult = 3;
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
+
+            //act
+            int result = newCounter.CountRepeats();
+
+            //assert
+            Assert.Equal(expectedResult, result);
+                }
 
 
 
