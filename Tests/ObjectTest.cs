@@ -8,7 +8,7 @@ namespace WordCounterTest
     public class RepeatCounterTest
     {
         [Fact]
-        public void methodWeAreTesting_whatBehaviorWeAreTesting_expectedResultOfTest()
+        public void GetSentence_returnUserSentence_sameSentence()
         {
             //arrange
             string sentence = "this is a sentence";
@@ -21,5 +21,7 @@ namespace WordCounterTest
             //assert
             Assert.Equal(returnSentence, result);
         }
+
+
     }
 }
