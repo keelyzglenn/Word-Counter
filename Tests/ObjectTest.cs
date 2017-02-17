@@ -52,6 +52,22 @@ namespace WordCounterTest
 
             //act
             bool result = newCounter.ContainsWord();
+            //assert
+            Assert.Equal(expectedResult, result);
+        }
+
+// this will return true or false if the sentence contains the word
+        [Fact]
+        public void CountRepeats_howManyTimesdoesSentenceHaveWord_one()
+        {
+            //arrange
+            string sentence = "this is a sentence";
+            string word = "sentence";
+            int expectedResult = 1;
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
+
+            //act
+            int result = newCounter.CountRepeats();
             Console.WriteLine(expectedResult);
             Console.WriteLine(result);
             //assert
