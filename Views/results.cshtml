@@ -10,9 +10,13 @@
     </div>
 
     <div class="row">
+        <h1>Your sentence contains your word @Model.CountRepeats()</h1>
 
-        <h2>Your new sentence is:</h2>
-        <h3>@Model</h3>
+        <h2>Your sentence was:</h2>
+        <h3>@Model.GetSentence()</h3>
+
+        <h2>Your word was:</h2>
+        <h3>@Model.GetWord()</h3>
 
     </div>
 
