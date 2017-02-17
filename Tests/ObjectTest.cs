@@ -28,8 +28,8 @@ namespace WordCounterTest
         public void GetWord_returnUserWord_sameWord()
         {
             //arrange
-            string word = "sentence";
             string sentence = "this is a sentence";
+            string word = "sentence";
             string returnWord = "sentence";
             RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
@@ -38,6 +38,24 @@ namespace WordCounterTest
 
             //assert
             Assert.Equal(returnWord, result);
+        }
+
+// this will return true or false if the sentence contains the word
+        [Fact]
+        public void containsWord_doesSentenceHaveWord_true()
+        {
+            //arrange
+            string sentence = "this is a sentence";
+            string word = "sentence";
+            bool expectedResult = true;
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
+
+            //act
+            string result = newCounter.ContainsWord();
+            Console.WriteLine(expectedResult);
+            Console.WriteLine(result);
+            //assert
+            Assert.Equal(expectedResult, result);
         }
 
 
