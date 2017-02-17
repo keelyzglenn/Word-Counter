@@ -18,6 +18,9 @@ This webpage demonstrates my ability to combine the last two weeks of learning a
 * CS#
 * Nancy
 
+# Link
+
+https://github.com/keelyzglenn/Word-Counter.git
 
 ## Specs
 
