@@ -11,7 +11,8 @@ namespace WordCounter.Objects
         {
             _sentence = userSentence;
         }
-
+        
+// to return user input sentence
         public string GetSentence()
         {
             return _sentence;

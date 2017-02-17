@@ -26,10 +26,10 @@ Input: "this is a sentence."
 Output: "this is a sentence."
 Reason: The easiest behavior to test is if the program can take an input and return the exact same input with no changes.
 
-* User inputs a single word and the sentence. The program returns the word and the sentence
-Input: Sentence: "this is a sentence.", Word: "sentence"
-Output: Sentence: "this is a sentence.", Word: "sentence"
-Reason: The second easiest behavior to test is if the program can take TWO inputs and return the exact same inputs with no changes.
+* User inputs a single word. The program returns the word.
+Input: Word: "sentence"
+Output: Word: "sentence"
+Reason: The easiest behavior to test is if the program can take an input and return the exact same input with no changes.
 
 * The program will search through the inputted sentence and using the inputted word the program will return the number of times the sentence contains the inputted word.
 Input: Sentence: "this is a sentence.", Word: "sentence"
