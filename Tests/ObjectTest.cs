@@ -24,17 +24,15 @@ namespace WordCounterTest
         }
 // this will return the inputted sentence exacty
         [Fact]
-        public void GetSentenceandWord_returnUserSentenceandWord_sameSentenceandWord()
+        public void GetWord_returnUserWord_sameWord()
         {
             //arrange
-            string sentence = "this is a sentence";
             string word = "sentence";
-            string returnSentence = "this is a sentence";
             string returnWord = "sentence";
-            RepeatCounter newCounter = new RepeatCounter(sentence, word);
+            RepeatCounter newCounter = new RepeatCounter(word);
 
             //act
-            string result = newCounter.GetBothInputs(returnSentence, returnWord);
+            string result = newCounter.GetWord();
 
             //assert
             Assert.Equal(returnSentence, result);
