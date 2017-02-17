@@ -17,7 +17,7 @@ namespace WordCounter
                 string sentence = Request.Form["sentence"];
                 string wordSelect = Request.Form["word"];
                 RepeatCounter newCounter = new RepeatCounter(sentence, wordSelect);
-                return View["result.cshtml", newCounter];
+                return View["results.cshtml", newCounter];
             };
         }
     }
