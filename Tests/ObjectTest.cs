@@ -13,8 +13,9 @@ namespace WordCounterTest
         {
             //arrange
             string sentence = "this is a sentence";
+            string word = "sentence";
             string returnSentence = "this is a sentence";
-            RepeatCounter newCounter = new RepeatCounter(sentence);
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
             //act
             string result = newCounter.GetSentence();
@@ -28,14 +29,15 @@ namespace WordCounterTest
         {
             //arrange
             string word = "sentence";
+            string sentence = "this is a sentence";
             string returnWord = "sentence";
-            RepeatCounter newCounter = new RepeatCounter(word);
+            RepeatCounter newCounter = new RepeatCounter(sentence, word);
 
             //act
             string result = newCounter.GetWord();
 
             //assert
-            Assert.Equal(returnSentence, result);
+            Assert.Equal(returnWord, result);
         }
 
 
