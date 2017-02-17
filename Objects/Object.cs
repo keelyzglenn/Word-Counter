@@ -41,6 +41,25 @@ namespace WordCounter.Objects
             return false;
         }
 
-        
+// to determine how many times a sentence contains word
+        public int RepeatCounter()
+        {
+            int count = 0;
+
+            for(int word = 0; word < _sentenceSplitArray.Length; word++)
+            {
+                if (word == _word)
+                {
+                    count += 1;
+                }
+                else
+                {
+                    break;
+                }
+            return count;
+            }
+        }
+
+
     }
 }
