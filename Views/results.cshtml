@@ -5,19 +5,23 @@
 
 <div class="container">
 
-    <div class="row jumbotron">
-        <h1>Find and Replace</h1>
+    <div class="row title">
+        <h1>Sentence Challenge</h1>
+        <p class="underline">_______________</p>
     </div>
 
     <div class="row">
-        <h1>Your sentence contains your word @Model.CountRepeats() time(s)</h1>
+        <h2 id="answer">Your sentence contains your word @Model.CountRepeats() time(s)</h1>
 
-        <h2>Your sentence was:</h2>
-        <h3>@Model.GetSentence()</h3>
+            <div class="examples">
+                <h2>Your sentence was:</h2>
+                <h3>@Model.GetSentence()</h3>
+            </div>
+            <div class="examples">
+                <h2>Your word was:</h2>
+                <h3>@Model.GetWord()</h3>
+            </div>
+        </div>
 
-        <h2>Your word was:</h2>
-        <h3>@Model.GetWord()</h3>
-
+        <h3 id="go-home"><a href="/">Enter another sentence</a></h3>
     </div>
-
-</div>

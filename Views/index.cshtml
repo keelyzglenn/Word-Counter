@@ -1,21 +1,28 @@
 @{
-  Layout="Shared/_Layout.cshtml";
+    Layout="Shared/_Layout.cshtml";
 }
 
 <div class="container">
 
-  <div class="row jumbotron">
-    <h1>Find and Replace</h1>
-  </div>
+    <div class="row title">
+        <h1>Sentence Challenge</h1>
+        <p class="underline">_______________</p>
+    </div>
 
-  <div class="row">
-    <form class="" action="/result" method="post">
-      <label for="sentence">Enter a sentence</label>
-      <input type="text" name="sentence">
-      <p><label for="word">Enter a word</label>
-      <input type="text" name="word"></p>
-      <button class="btn" type="submit" name="button">Find Out</button>
-    </form>
-  </div>
+    <div class="row form">
+        <form class="" action="/result" method="post">
+            <div id="sent">
+                <p><label for="sentence">Enter a sentence</label></p>
+                <p><input type="text" name="sentence"></p>
+            </div>
+            <div id="word">
+                <p><label for="word">Enter a word</label> </p>
+                <p><input type="text" name="word"></p>
+                </div>
+                <button class="btn" type="submit" name="button">Find Out</button>
+            </form>
+        </div>
 
-</div>
+
+
+    </div>

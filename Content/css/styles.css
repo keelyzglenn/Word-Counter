@@ -1,0 +1,66 @@
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 30px;
+    font-family: 'Lato', sans-serif;
+}
+.underline {
+    /*text-decoration: overline;*/
+    margin-top: -30px;
+    color: rgb(226, 202, 18);
+    font-weight: bold;
+    font-size: 40px;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    background-image: url("../img/background.jpg");
+    background-repeat: no-repeat;
+    /*background-position: center;*/
+    background-size: cover;
+    height: 700px;
+}
+
+/*index*/
+button {
+    background-color: rgb(226, 202, 18);
+    margin-top: 40px;
+}
+
+.form {
+    text-align: center;
+}
+
+#sent {
+    margin-top: 50px;
+}
+
+#word {
+    margin-top: 20px;
+}
+
+
+/*result*/
+
+
+#answer {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.examples {
+    margin-top: 60px;
+    text-align: left;
+}
+
+
+#go-home {
+    text-align: right;
+    margin-top: 160px;
+    color: black;
+}
+
+a {
+    color: black;
+}
