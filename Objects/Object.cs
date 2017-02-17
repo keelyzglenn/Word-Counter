@@ -8,27 +8,29 @@ namespace WordCounter.Objects
         private string _sentence;
         private string _word;
         private string[] _sentenceSplitArray;
+        private int _count;
 
         public RepeatCounter(string userSentence, string userWord)
         {
             _sentence = userSentence;
             _word = userWord;
             _sentenceSplitArray = userSentence.Split(' ');
+            _count = 0;
         }
 
-// to return user input sentence
+        // to return user input sentence
         public string GetSentence()
         {
             return _sentence;
         }
 
-// to return user input sentence
+        // to return user input sentence
         public string GetWord()
         {
             return _word;
         }
 
-// to determine if sentence contains word
+        // to determine if sentence contains word
         public bool ContainsWord()
         {
             foreach (string word in _sentenceSplitArray)
@@ -41,25 +43,24 @@ namespace WordCounter.Objects
             return false;
         }
 
-// to determine how many times a sentence contains word
-        public int RepeatCounter()
+        // to determine how many times a sentence contains word
+        public int CountRepeats()
         {
-            int count = 0;
+            string[] _wordArray = _word.Split(' ');
+            Console.WriteLine(_wordArray);
 
-            for(int word = 0; word < _sentenceSplitArray.Length; word++)
+            for (int i = 0; i < _sentenceSplitArray.Length; i++)
             {
-                if (word == _word)
+                for (int j= 0; j < _wordArray.Length; j++)
                 {
-                    count += 1;
+                    if (_sentenceSplitArray[i] == _wordArray[i])
+                    {
+                        _count += 1;
+                    }
                 }
-                else
-                {
-                    break;
-                }
-            return count;
             }
+            return _count;
         }
-
 
     }
 }
