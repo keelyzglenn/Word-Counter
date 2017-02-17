@@ -7,11 +7,13 @@ namespace WordCounter.Objects
     {
         private string _sentence;
         private string _word;
+        private string[] _sentenceSplitArray;
 
         public RepeatCounter(string userSentence, string userWord)
         {
             _sentence = userSentence;
             _word = userWord;
+            _sentenceSplitArray = userSentence.Split(' ');
         }
 
 // to return user input sentence
@@ -25,5 +27,20 @@ namespace WordCounter.Objects
         {
             return _word;
         }
+
+// to determine if sentence contains word
+        public bool ContainsWord()
+        {
+            foreach (string word in _sentenceSplitArray)
+            {
+                if(word == _word)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        
     }
 }
